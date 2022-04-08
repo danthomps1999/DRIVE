@@ -7,11 +7,14 @@ public class BuildWorld : MonoBehaviour
 
     public Material asphalt;
 
+
     // Start is called before the first frame update
     void Start()
     {
+
         buildGround();
         buildRoad();
+
     }
 
     // Update is called once per frame
@@ -35,5 +38,17 @@ public class BuildWorld : MonoBehaviour
 
         Instantiate(roadPlane, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
     }
+
+    /*
+    Can do it this way but it's bad for this purpose.
+    private BuildCar carBuilder;
+            //carBuilder = GetComponent<BuildCar>();
+    would have to put the above in the start script to define the object
+
+
+    void buildACar(){
+        carBuilder.buildCube();
+    }
+    */
     
 }

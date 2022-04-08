@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e217043d5c0c39a46bf8ba3895e730ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asphalt: {fileID: 2100000, guid: 0e3ffeb9d1d4abf469354380084de7bd, type: 2}
 --- !u!4 &816409201
 Transform:
   m_ObjectHideFlags: 0
