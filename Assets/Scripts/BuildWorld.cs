@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class BuildWorld : MonoBehaviour
 {
+
+    public Material asphalt;
+
     // Start is called before the first frame update
     void Start()
     {
         buildGround();
+        buildRoad();
     }
 
     // Update is called once per frame
@@ -18,8 +22,18 @@ public class BuildWorld : MonoBehaviour
 
     void buildGround(){
         GameObject groundPlane = GameObject.CreatePrimitive(PrimitiveType.Plane);
-        groundPlane.transform.localScale = new Vector3(10.0f, 10.0f, 10.0f);
+        groundPlane.transform.localScale = new Vector3(10.0f, 10.0f, 100.0f);
         Instantiate(groundPlane, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+    }
+
+    void buildRoad(){
+        GameObject roadPlane = GameObject.CreatePrimitive(PrimitiveType.Plane);
+        roadPlane.transform.localScale = new Vector3(4.0f, 10.0f, 100.0f);
+        roadPlane.transform.position = new Vector3(0f, .1f, 0f);
+
+        roadPlane.GetComponent<Renderer> ().material = asphalt;
+
+        Instantiate(roadPlane, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
     }
     
 }
