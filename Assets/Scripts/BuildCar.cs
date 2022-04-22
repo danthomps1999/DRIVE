@@ -7,7 +7,13 @@ public class BuildCar : MonoBehaviour
     
     List<GameObject> carsForward;
     List<GameObject> carsBackward;
-    public GameObject car;
+
+    //public GameObject redCar;
+    //public GameObject blueCar;
+    public GameObject SedanBase;
+    public CarType redCar;
+    
+    List<CarType> carTypes;
 
     // Start is called before the first frame update
     void Start()
@@ -15,11 +21,18 @@ public class BuildCar : MonoBehaviour
         this.carsForward = new List<GameObject>();
         this.carsBackward = new List<GameObject>();
 
-        buildManyMovingCubes();
+        this.carTypes = new List<CarType>();
+
+
+
+
+        //buildManyMovingCubes();
 
         //buildCube();
 
         //addDriver();
+
+        buildCarPrefab(redCar);
     }
 
     // Update is called once per frame
@@ -65,6 +78,12 @@ public class BuildCar : MonoBehaviour
 
     }
 
+    public void buildCarPrefab(CarType carType){
+          GameObject madeCar = Instantiate(SedanBase, new Vector3(2.0f, 0.0f, 0.0f), Quaternion.identity);
+          madeCar.GetComponent<SedanBaseInitializer>().Initialize(carType);
+          this.carsForward.Add(madeCar);
+    }
+
     public void moveCars(){
         foreach (GameObject car in this.carsForward)
         {
@@ -76,4 +95,11 @@ public class BuildCar : MonoBehaviour
             car.transform.position += Vector3.forward * Time.deltaTime * -10;
         }
     }
+
+    //Prefab rendering
+        //gameobject redcarbuilt = instantiate(redcar, new vector3(2.0f, 0f, 0.0f), quaternion.identity);
+        //this.carsforward.add(redcarbuilt);
+
+        //gameobject bluecarbuilt = instantiate(bluecar, new vector3(6.0f, 0f, 0.0f), quaternion.identity);
+        //this.carsforward.add(bluecarbuilt);
 }
