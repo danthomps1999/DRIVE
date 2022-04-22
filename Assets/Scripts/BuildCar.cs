@@ -12,6 +12,7 @@ public class BuildCar : MonoBehaviour
     //public GameObject blueCar;
     public GameObject SedanBase;
     public CarType redCar;
+    public CarType blueCar;
     
     List<CarType> carTypes;
 
@@ -32,7 +33,8 @@ public class BuildCar : MonoBehaviour
 
         //addDriver();
 
-        buildCarPrefab(redCar);
+        buildCarPrefab(redCar, 2.0f);
+        buildCarPrefab(blueCar, 6.0f);
     }
 
     // Update is called once per frame
@@ -78,8 +80,8 @@ public class BuildCar : MonoBehaviour
 
     }
 
-    public void buildCarPrefab(CarType carType){
-          GameObject madeCar = Instantiate(SedanBase, new Vector3(2.0f, 0.0f, 0.0f), Quaternion.identity);
+    public void buildCarPrefab(CarType carType, float xOffset){
+          GameObject madeCar = Instantiate(SedanBase, new Vector3(xOffset, 0.0f, 0.0f), Quaternion.identity);
           madeCar.GetComponent<SedanBaseInitializer>().Initialize(carType);
           this.carsForward.Add(madeCar);
     }
