@@ -7,6 +7,14 @@ public class SedanBaseInitializer : MonoBehaviour
 
     public CarType carType;
 
+    int PreferredMaxSpeed;
+    int PreferredTailingDistance;
+
+    //Should I take it in like this, or do it differently?
+    string Color;
+
+    int OutlierValue;
+
     // Start is called before the first frame update
     void Start()
     {

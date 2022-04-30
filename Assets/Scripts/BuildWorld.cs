@@ -7,6 +7,8 @@ public class BuildWorld : MonoBehaviour
 
     public Material asphalt;
 
+    public CarFactory CarFactory;
+
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +16,8 @@ public class BuildWorld : MonoBehaviour
 
         buildGround();
         buildRoad();
+
+
 
     }
 

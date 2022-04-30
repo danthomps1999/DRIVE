@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asphalt: {fileID: 2100000, guid: 0e3ffeb9d1d4abf469354380084de7bd, type: 2}
+  CarFactory: {fileID: 816409202}
 --- !u!4 &816409201
 Transform:
   m_ObjectHideFlags: 0
@@ -270,12 +271,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 816409199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22129fc8732be704c9596795c0f5a4d7, type: 3}
+  m_Script: {fileID: 11500000, guid: b034983b434f37d48a47e11296dc1b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SedanBase: {fileID: 3139740664330116669, guid: 2f46495665e9e214b9dfd57ece0191e1, type: 3}
-  redCar: {fileID: 11400000, guid: 39b3385b90af26941901e83ee14f4871, type: 2}
-  blueCar: {fileID: 11400000, guid: 7f03ff74624a3a745a5ca6db9268168d, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
